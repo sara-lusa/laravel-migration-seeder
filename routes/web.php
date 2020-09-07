@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/characters', function () {
+    return view('characters.characters');
+});
+
+Route::get('/heroes', 'HeroController@index');
+
+Route::get('/villains', 'VillainController@index');
